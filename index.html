@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photography Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fionn's Photography</h1>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I am a Physics Student from the University of Bristol on a year abroad exchange at HKUST. Whilst I'm here, I want to learn as much as I possibly can about the unique culture that Hong Kong has: I feel that the most effective way to do so as an individual is through photography. Through photography I gain a unique perspective of not only the city but its people. I intend this site to tell a story of how my trusty, pocketable rx100 and I experience this amazing city ive found myself in for the next year!</p>
+        </section>
+
+        <section id="gallery">
+            <h2>My Albums</h2>
+            
+            <!-- We replaced the grid with a vertical list of rows -->
+            <div class="album-list">
+                
+                <!-- HK Rainbow Album Row -->
+                <a href="album-hk-rainbow.html" class="album-row-link">
+                    <div class="album-row">
+                        
+                        <!-- LEFT HALF: The Title -->
+                        <div class="album-info">
+                            <h3 class="album-row-title">HK Rainbow</h3>
+                        </div>
+                        
+                        <!-- RIGHT HALF: The 4:3 Photo Preview -->
+                        <div class="album-preview">
+                            <img src="images/Hong Kong/HK Rainbow/1.JPG" alt="HK Rainbow Album" class="cycle-img" 
+                                 data-folder="images/Hong Kong/HK Rainbow/" data-count="6">
+                        </div>
+
+                    </div>
+                </a>
+
+                <!-- You can add your next album row here later! -->
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fionn Doheny. All rights reserved.</p>
+    </footer>
+
+    <!-- FIXED: This line tells the HTML to run your JavaScript file! -->
+    <script src="script.js"></script>
+</body>
+</html>

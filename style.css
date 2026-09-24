@@ -1,0 +1,186 @@
+/* Make the whole page look sleek and modern */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Style your header */
+header {
+    padding: 25px 20px;
+    background-color: #000000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+/* Style the About Me section */
+#about {
+    padding: 5px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+#about h2 {
+    margin-top: 5px; 
+}
+
+/* --- MAIN PAGE GALLERY STYLES --- */
+
+/* 1. The Gallery Section - Controls the side spacing */
+#gallery {
+    padding: 20px 50px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; 
+}
+
+#gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center; /* Centers the 'My Albums' title */
+}
+
+/* 2. The Album List - Stacks your albums vertically with space between them */
+.album-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; 
+    margin-top: 40px;
+}
+
+/* Removes standard link underlines */
+.album-row-link {
+    text-decoration: none;
+    color: white;
+}
+
+/* 3. The 50/50 Split Layout */
+.album-row {
+    display: flex;
+    align-items: center; /* Vertically centers the text and the image */
+}
+
+/* LEFT HALF - The Title */
+.album-info {
+    flex: 1; /* Takes up exactly 50% of the page width */
+    display: flex;
+    justify-content: center; /* Horizontally centers the text on the left half */
+    align-items: center;     /* Vertically centers the text */
+    padding: 20px;
+}
+
+.album-row-title {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin: 0;
+    font-weight: 300; /* Makes the font look sleek and modern */
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+/* RIGHT HALF - The 4:3 Image */
+.album-preview {
+    flex: 1; /* Takes up the remaining 50% of the page */
+    aspect-ratio: 4 / 3; /* Forces the box into a perfect horizontal 4:3 ratio! */
+    overflow: hidden; /* Keeps the zoom effect cleanly inside the box */
+    border-radius: 8px; /* Optional: gives the photo slightly rounded corners */
+}
+
+.album-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the photo perfectly fills the 4:3 box without stretching */
+    transition: transform 0.5s ease;
+}
+
+/* Hover effects for the new layout! */
+.album-row-link:hover .album-preview img {
+    transform: scale(1.05); /* Smoothly zooms the photo */
+}
+
+.album-row-link:hover .album-row-title {
+    color: #888888; /* Dims the title slightly so you focus on the photo */
+}
+
+/* Style the footer */
+footer {
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #000000;
+    color: #777777;
+    font-size: 0.9rem;
+}
+
+/* --- INDIVIDUAL ALBUM PAGE STYLES (For Phase 2) --- */
+
+/* The split screen layout */
+.album-layout {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* The left side (Blog text) */
+.album-blog {
+    flex: 1; 
+    min-width: 300px;
+    max-width: 400px;
+    text-align: left;
+    position: sticky; /* Keeps the text on screen while scrolling down photos */
+    top: 40px; 
+}
+
+.album-blog h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.album-blog p {
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+/* The back button */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.back-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* The right side (Photos) */
+.album-photos {
+    flex: 2; 
+    display: flex;
+    flex-direction: column; 
+    gap: 30px; 
+}
+
+.album-photos img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
